@@ -30,7 +30,14 @@ require(knitr)
 data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_strength/data.txt",sep="",header=TRUE)  
 
 ```
+# Introduction:
 
+We will produce three equation models to get   
+1. sim score baed on arm strength  
+2. sim score based on arm grip strength  
+3. sim score based on both arm and grip strength  
+
+For each model we will predict sim for arm=88, grip=94
 ## Model 1 SIM~ARMS
 
 ### scatterplot
