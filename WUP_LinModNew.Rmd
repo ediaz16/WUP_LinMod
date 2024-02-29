@@ -48,6 +48,12 @@ We have numerical responses (sim score) and numerical explanatory   variables (a
 
 ### scatterplot
 
+```{r}
+plot(SIMS~ARM,data=data)
+```
+
+
+
 ### Numerical results
 
 
