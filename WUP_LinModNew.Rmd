@@ -115,8 +115,15 @@ m = data.frame(data['GRIP'], data['ARM'], data['SIMS'])
 cor(m)
 ```
   
-  
-  
+Table shows that SIMS correlates with GRIP in a positive manner(0.64) and SIMS correlates with ARM also in a variables manner (0.69). This says these positive are useful in predicting SIMS
+
+
+```{r}
+plot(data$GRIP, data$ARM)
+```
+
+
+This plot shows GRIP and ARM are not independent so this is not necessarily a good model.   
 ### Inferential  (Build 2-dimentional model.3)
 
 #### predict model.3 at target point
