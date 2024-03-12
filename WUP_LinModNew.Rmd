@@ -123,11 +123,25 @@ plot(data$GRIP, data$ARM)
 ```
 
 
-This plot shows GRIP and ARM are not independent so this is not necessarily a good model.   
+This plot shows GRIP and ARM are not independent so this is not necessarily a good model.  
+
 ### Inferential  (Build 2-dimentional model.3)
 
+```{r}
+model.3 =lm(SIMS`GRIP+ARM, data =data)
+print (summary.lm(model.3))
+
+```
+
 #### predict model.3 at target point
+
+```{r}
+newPoint = data.frame(GRIP = 94, ARM = 88)
+predict.lm(model.3, newPoint, interval = 'prediction')
+```
   
+
+The 95%  confidence interval is SIMS is between -2.13 and 2.43. Since this interval contains we do not have a very good prediction for SIMS. 
 
 ## Comparing nested models ANOVA Test
 
