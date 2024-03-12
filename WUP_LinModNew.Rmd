@@ -46,6 +46,10 @@ We have numerical responses (sim score) and numerical explanatory   variables (a
 
 ## Model 1 SIM~ARMS
 
+```{r}
+model1.1 = lm(SIMS~ARM, data=data)
+```
+
 ### scatterplot
 
 ```{r}
@@ -107,6 +111,7 @@ This is scatter plot with a function on it at ARM strength 88 the 95 percent con
 
 ## Model 3 SIM~ARM+GRIP
 
+
 ### Numerical results (cor)
 
 
@@ -128,8 +133,8 @@ This plot shows GRIP and ARM are not independent so this is not necessarily a go
 ### Inferential  (Build 2-dimentional model.3)
 
 ```{r}
-model.3 =lm(SIMS`GRIP+ARM, data =data)
-print (summary.lm(model.3))
+model.3 = lm(SIMS~GRIP+ARM, data = data)
+print(summary(model.3))
 
 ```
 
@@ -145,7 +150,18 @@ The 95%  confidence interval is SIMS is between -2.13 and 2.43. Since this inter
 
 ## Comparing nested models ANOVA Test
 
+```{r}
+anova(model.1,model.2)
+```
+
+
 ### Model.1 vs Model.3
+
+```{r}
+anova(model.1,model.3)
+```
+
+P-value is 0.00000499, this is less than 0.05 so we conclude that model 3 is better than model .1 
 ### Model.2 vs Model.3
 
 ## Informally compare Model.1 with model.2
