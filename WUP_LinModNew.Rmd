@@ -109,7 +109,13 @@ This is scatter plot with a function on it at ARM strength 88 the 95 percent con
 
 ### Numerical results (cor)
 
-`
+
+```{r}
+m = data.frame(data['GRIP'], data['ARM'], data['SIMS'])
+cor(m)
+```
+  
+  
   
 ### Inferential  (Build 2-dimentional model.3)
 
